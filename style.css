@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -168,4 +168,64 @@ main {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+  }
+  .player {
+    width: 100%;
+    height: 50%;
+    padding: 4rem;
+    justify-content: space-evenly;
+  }
+  .name {
+    font-size: 2rem;
+    margin: 0;
+  }
+  .score {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  .current {
+    width: 60%;
+    padding: 0.5rem;
+  }
+  .btn {
+    position: absolute;
+    width: calc(100% / 3);
+    font-size: 1.2rem;
+    top: 44%;
+  }
+  .btn--new {
+    left: 16.5%;
+  }
+  .btn--hold {
+    left: 49.5%;
+  }
+  .btn--roll {
+    left: 82.5%;
+  }
+  .current-label {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .current-score {
+    font-size: 2rem;
+  }
+  .dice {
+    visibility: hidden;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .player {
+    justify-content: space-around;
+    padding: 4rem;
+  }
+  .current {
+    width: 60%;
+  }
 }
